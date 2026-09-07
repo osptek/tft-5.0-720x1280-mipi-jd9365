@@ -72,6 +72,7 @@ Current module version: **YDP500BT004-V1**. Electrical and mechanical details fo
 | Resource | Link |
 | ---- | ---- |
 | Product datasheet (YDP500BT004-V1) | [`docs/YDP500BT004-V1.pdf`](./docs/YDP500BT004-V1.pdf) |
+| 3D drawing (YDP500BT004-V1) | [`docs/YDP500BT004-V1.dwg`](./docs/YDP500BT004-V1.dwg) |
 | Driver IC user guide (JD9365D) | [`docs/JD9365D_User_Guide_standard_V0.02_20171225.pdf`](./docs/JD9365D_User_Guide_standard_V0.02_20171225.pdf) |
 | Init sequence (text) | [`docs/JD9365D_BOE4.96_720x1280_MIPI4L_init.txt`](./docs/JD9365D_BOE4.96_720x1280_MIPI4L_init.txt) |
 | TFT050BT231 adapter schematic V1.0 | [`docs/SCH_TFT050BT231转接板V1.0_2026-08-03.pdf`](./docs/SCH_TFT050BT231%E8%BD%AC%E6%8E%A5%E6%9D%BFV1.0_2026-08-03.pdf) |

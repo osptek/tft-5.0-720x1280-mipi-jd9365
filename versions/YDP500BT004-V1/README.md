@@ -72,6 +72,7 @@ OSPTEK **5.0 寸 720×1280 TFT** 是一款 **MIPI DSI** 接口彩色显示模组
 | 资料 | 链接 |
 | ---- | ---- |
 | 产品规格书（YDP500BT004-V1） | [`docs/YDP500BT004-V1.pdf`](./docs/YDP500BT004-V1.pdf) |
+| 3D 图纸（YDP500BT004-V1） | [`docs/YDP500BT004-V1.dwg`](./docs/YDP500BT004-V1.dwg) |
 | 驱动 IC 用户手册（JD9365D） | [`docs/JD9365D_User_Guide_standard_V0.02_20171225.pdf`](./docs/JD9365D_User_Guide_standard_V0.02_20171225.pdf) |
 | 初始化序列（文本） | [`docs/JD9365D_BOE4.96_720x1280_MIPI4L_init.txt`](./docs/JD9365D_BOE4.96_720x1280_MIPI4L_init.txt) |
 | TFT050BT231 转接板原理图 V1.0 | [`docs/SCH_TFT050BT231转接板V1.0_2026-08-03.pdf`](./docs/SCH_TFT050BT231转接板V1.0_2026-08-03.pdf) |
