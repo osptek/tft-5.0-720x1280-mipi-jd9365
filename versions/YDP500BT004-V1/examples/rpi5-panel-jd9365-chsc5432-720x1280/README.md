@@ -1,0 +1,101 @@
+# 1. 准备工作
+
+```
+# 更新软件包列表
+sudo apt update
+
+# 安装编译工具链与匹配的内核头文件
+sudo apt install build-essential linux-headers-$(uname -r)
+
+# 创建文件夹并进入
+mkdir jd9365-chsc5432-720x1280 && cd jd9365-chsc5432-720x1280
+```
+
+# 2. 驱动源码（panel-jd9365-720x1280.c）
+
+```
+sudo nano panel-jd9365-720x1280.c
+```
+
+# 3. 驱动源码（chsc5432-touch.c）
+
+```
+sudo nano chsc5432-touch.c
+```
+
+# 4. Makefile
+
+```
+sudo nano Makefile
+```
+
+```
+obj-m += panel-jd9365-720x1280.o
+obj-m += chsc5432-touch.o
+
+all:
+	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules
+
+clean:
+	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) clean
+```
+
+> 编译：
+
+```
+make clean
+make
+```
+
+```
+sudo mkdir -p /lib/modules/$(uname -r)/kernel/drivers/gpu/drm/panel/
+sudo cp panel-jd9365-720x1280.ko /lib/modules/$(uname -r)/kernel/drivers/gpu/drm/panel/
+
+sudo mkdir -p /lib/modules/$(uname -r)/kernel/drivers/input/touchscreen/
+sudo cp chsc5432-touch.ko /lib/modules/$(uname -r)/kernel/drivers/input/touchscreen/
+
+sudo depmod -a
+```
+
+# 5. 设备树 Overlay（vc4-kms-dsi-jd9365-chsc5432-720x1280-overlay.dts）
+
+```
+sudo nano vc4-kms-dsi-jd9365-chsc5432-720x1280-overlay.dts
+```
+
+> 编译并安装：
+
+```
+dtc -I dts -O dtb -o vc4-kms-dsi-jd9365-chsc5432-720x1280-overlay.dtbo vc4-kms-dsi-jd9365-chsc5432-720x1280-overlay.dts
+
+sudo cp vc4-kms-dsi-jd9365-chsc5432-720x1280-overlay.dtbo /boot/firmware/overlays/
+```
+
+
+# 6. 启用
+
+> 编辑 /boot/firmware/config.txt，添加：
+
+```
+sudo nano  /boot/firmware/config.txt
+```
+
+
+
+```
+# 关闭自动检测，避免和手动 overlay 冲突
+display_auto_detect=0
+
+dtoverlay=vc4-kms-v3d
+
+dtoverlay=vc4-kms-dsi-jd9365-chsc5432-720x1280-overlay
+
+# 忽略官方 LCD
+ignore_lcd=1
+```
+
+> 重启：
+
+```
+sudo reboot
+```
