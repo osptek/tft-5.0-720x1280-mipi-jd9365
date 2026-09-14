@@ -29,10 +29,12 @@
 #define MIPI_DPI_PX_FORMAT (LCD_COLOR_PIXEL_FORMAT_RGB565)
 #define BSP_LCD_COLOR_DEPTH (16)
 #define LV_COLOR_FORMAT LV_COLOR_FORMAT_RGB565
+#define MIPI_DSI_LANE_BITRATE_MBPS  870
 #elif LV_COLOR_DEPTH == 24
 #define MIPI_DPI_PX_FORMAT (LCD_COLOR_PIXEL_FORMAT_RGB888)
 #define BSP_LCD_COLOR_DEPTH (24)
 #define LV_COLOR_FORMAT LV_COLOR_FORMAT_RGB888
+#define MIPI_DSI_LANE_BITRATE_MBPS  1300
 #endif
 
 // “VDD_MIPI_DPHY”应供电 2.5V
@@ -67,7 +69,7 @@ static lv_indev_t *lvgl_touch_indev = NULL;
 // 创建JD9365控制面板
 esp_lcd_dpi_panel_config_t dpi_config = {                 \
     .dpi_clk_src = MIPI_DSI_DPI_CLK_SRC_DEFAULT,          \
-    .dpi_clock_freq_mhz = 60,                             \
+    .dpi_clock_freq_mhz = 63,                             \
     .virtual_channel = 0,                                 \
     .pixel_format = MIPI_DPI_PX_FORMAT,                   \
     .num_fbs = 1,                                         \
@@ -129,7 +131,7 @@ static esp_err_t app_lcd_init(void)
         .bus_id = 0,                                           \
         .num_data_lanes = 2,                                   \
         .phy_clk_src = 0,                                      \
-        .lane_bit_rate_mbps = 1000,                             \
+        .lane_bit_rate_mbps = MIPI_DSI_LANE_BITRATE_MBPS,      \
     };
     ESP_GOTO_ON_ERROR(esp_lcd_new_dsi_bus(&bus_config, &mipi_dsi_bus), err, TAG, "DSI bus init failed");
 

@@ -50,6 +50,7 @@ Current module version: **YDP500BT004-V1**. Electrical and mechanical details fo
 
 | Description | Path |
 | ---- | ---- |
+| ESP32-P4 · JD9365 MIPI + LVGL9 (display only) | [`examples/esp32p4-idf5_jd9365-mipi_lvgl9/`](./examples/esp32p4-idf5_jd9365-mipi_lvgl9/) |
 | ESP32-P4 · JD9365 MIPI + esp-lvgl-port / LVGL9 (touch CHSC5432) | [`examples/esp32p4-idf5_jd9365-mipi_esp-lvgl-port_lvgl9/`](./examples/esp32p4-idf5_jd9365-mipi_esp-lvgl-port_lvgl9/) |
 | Raspberry Pi 5 · JD9365 720×1280 panel / DT overlay (display only) | [`examples/rpi5-panel-jd9365-720x1280/`](./examples/rpi5-panel-jd9365-720x1280/) |
 | Raspberry Pi 5 · CHSC5432 touch / DT overlay (touch only) | [`examples/rpi5-touch-chsc5432/`](./examples/rpi5-touch-chsc5432/) |
@@ -83,7 +84,8 @@ tft-5.0-720x1280-mipi-jd9365/                                # repo root (nav: .
 
 ### Samples
 
-- [ESP32-P4 JD9365 MIPI + LVGL9](./examples/esp32p4-idf5_jd9365-mipi_esp-lvgl-port_lvgl9/)
+- [ESP32-P4 JD9365 MIPI + LVGL9 (display only)](./examples/esp32p4-idf5_jd9365-mipi_lvgl9/)
+- [ESP32-P4 JD9365 MIPI + LVGL9 (touch)](./examples/esp32p4-idf5_jd9365-mipi_esp-lvgl-port_lvgl9/)
 - [Raspberry Pi 5 JD9365 panel (display only)](./examples/rpi5-panel-jd9365-720x1280/)
 - [Raspberry Pi 5 CHSC5432 touch (touch only)](./examples/rpi5-touch-chsc5432/)
 - [Raspberry Pi 5 JD9365 display + CHSC5432 touch](./examples/rpi5-panel-jd9365-chsc5432-720x1280/)

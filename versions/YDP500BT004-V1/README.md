@@ -50,6 +50,7 @@ OSPTEK **5.0 寸 720×1280 TFT** 是一款 **MIPI DSI** 接口彩色显示模组
 
 | 说明 | 路径 |
 | ---- | ---- |
+| ESP32-P4 · JD9365 MIPI + LVGL9（仅显示） | [`examples/esp32p4-idf5_jd9365-mipi_lvgl9/`](./examples/esp32p4-idf5_jd9365-mipi_lvgl9/) |
 | ESP32-P4 · JD9365 MIPI + esp-lvgl-port / LVGL9（触摸 CHSC5432） | [`examples/esp32p4-idf5_jd9365-mipi_esp-lvgl-port_lvgl9/`](./examples/esp32p4-idf5_jd9365-mipi_esp-lvgl-port_lvgl9/) |
 | Raspberry Pi 5 · JD9365 720×1280 面板驱动 / DT overlay（仅显示） | [`examples/rpi5-panel-jd9365-720x1280/`](./examples/rpi5-panel-jd9365-720x1280/) |
 | Raspberry Pi 5 · CHSC5432 触摸驱动 / DT overlay（仅触摸） | [`examples/rpi5-touch-chsc5432/`](./examples/rpi5-touch-chsc5432/) |
@@ -83,7 +84,8 @@ tft-5.0-720x1280-mipi-jd9365/                                # 仓库根（导�
 
 ### 示例工程
 
-- [ESP32-P4 JD9365 MIPI + LVGL9](./examples/esp32p4-idf5_jd9365-mipi_esp-lvgl-port_lvgl9/)
+- [ESP32-P4 JD9365 MIPI + LVGL9（仅显示）](./examples/esp32p4-idf5_jd9365-mipi_lvgl9/)
+- [ESP32-P4 JD9365 MIPI + LVGL9（触摸）](./examples/esp32p4-idf5_jd9365-mipi_esp-lvgl-port_lvgl9/)
 - [Raspberry Pi 5 JD9365 面板（仅显示）](./examples/rpi5-panel-jd9365-720x1280/)
 - [Raspberry Pi 5 CHSC5432 触摸（仅触摸）](./examples/rpi5-touch-chsc5432/)
 - [Raspberry Pi 5 JD9365 显示 + CHSC5432 触摸](./examples/rpi5-panel-jd9365-chsc5432-720x1280/)
