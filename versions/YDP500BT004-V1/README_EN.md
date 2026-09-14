@@ -29,7 +29,7 @@
 
 OSPTEK **5.0″ 720×1280 TFT** is a **MIPI DSI** color display module driven by **JD9365**, with capacitive touch (**CHSC5432**). Suited to portrait HMI, handheld terminals, and mid-size interactive panels.
 
-Spec ID (repository name): `5.0-tft-720x1280-mipi-jd9365`
+Spec ID (repository name): `tft-5.0-720x1280-mipi-jd9365`
 
 Current module version: **YDP500BT004-V1**. Electrical and mechanical details follow [`docs/YDP500BT004-V1.pdf`](./docs/YDP500BT004-V1.pdf).
 
@@ -58,7 +58,7 @@ Current module version: **YDP500BT004-V1**. Electrical and mechanical details fo
 ## Repository layout
 
 ```text
-5.0-tft-720x1280-mipi-jd9365/                                # repo root (nav: ../../README_EN.md)
+tft-5.0-720x1280-mipi-jd9365/                                # repo root (nav: ../../README_EN.md)
 └── versions/
     └── YDP500BT004-V1/                                # full materials for this part number
         ├── README.md

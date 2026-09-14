@@ -29,7 +29,7 @@ This repository holds materials for the **5.0″ 720×1280 TFT (MIPI · JD9365)*
 
 The **root README is the navigation page**. Use the table below for a quick scan; open **Full docs** to enter that **part-number folder** under `versions/` (product page, datasheets, and examples live there).
 
-Repo id: `5.0-tft-720x1280-mipi-jd9365`
+Repo id: `tft-5.0-720x1280-mipi-jd9365`
 
 ---
 
