@@ -1,0 +1,14 @@
+id: tft-5.0-720x1280-mipi-jd9365
+category: displays
+
+size: "5.0"
+panel: tft
+resolution: 720x1280
+interface: [mipi]
+shape: rect
+
+versions:
+  - id: YDP500BT004-V1
+    driver: JD9365
+    touch: CHSC5432
+    note: none
